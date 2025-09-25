@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Playwright Suite" verbose="1" parallel="false">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="Regression Tests">
+        <classes>
+            <class name="com.myportfolio.testcases.PlaceOrder"/>
+        </classes>
+    </test>
+</suite>
