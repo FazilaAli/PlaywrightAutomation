@@ -20,17 +20,21 @@ public class LoginPage {
     public void setUsername(String username) {
         page.locator(usernameInput).waitFor();
         page.locator(usernameInput).fill(username);
+        System.out.println("Username is entered.");
     }
 
     public void setPassword(String password) {
         page.locator(passwordInput).waitFor();
         page.locator(passwordInput).fill(password);
+        System.out.println("Password is entered.");
     }
 
     public void clickLogin() {
         page.locator(loginButton).waitFor();
         page.locator(loginButton).click();
+        System.out.println("Login button is clicked.");
     }
+
     
 
 }

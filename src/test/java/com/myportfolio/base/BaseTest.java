@@ -1,6 +1,9 @@
 package com.myportfolio.base;
 
 import com.microsoft.playwright.*;
+import com.myportfolio.pageobject.CartPage;
+import com.myportfolio.pages.AddProducts;
+import com.myportfolio.pages.Checkout;
 import com.myportfolio.pages.Login;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,6 +16,8 @@ public class BaseTest {
 
     // Declare Page Objects here
     protected Login login;
+    protected AddProducts add;
+    protected Checkout checkout;
 
     @BeforeMethod
     public void setUp() {
@@ -23,6 +28,8 @@ public class BaseTest {
 
         // Initialize reusable Page Objects
         login = new Login(page);
+        add = new AddProducts(page);
+        checkout = new Checkout(page);
     }
 
     @AfterMethod
