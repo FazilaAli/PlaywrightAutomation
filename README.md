@@ -16,8 +16,7 @@ This repository demonstrates how to structure, maintain, and run UI automation t
 7. [Generating Reports](#generating-reports)
 8. [Best Practices & Guidelines](#best-practices--guidelines)
 9. [Contributing](#contributing)
-10. [License](#license)
-11. [Contact](#contact)
+10. [Contact](#contact)
 
 ---
 
@@ -169,13 +168,6 @@ Please follow code style, write descriptive commits, and ensure tests pass local
 
 ---
 
-## License
-
-Specify the license under which your project is distributed (e.g. MIT, Apache 2.0).
-*(You may want to add a `LICENSE` file if not already present.)*
-
----
-
 ## Contact
 
 For questions or feedback, you can reach me at:
@@ -183,6 +175,3 @@ For questions or feedback, you can reach me at:
 * GitHub: **[FazilaAli](https://github.com/FazilaAli)**
 * Email: fazilaali2001@gmail.com
 
----
-
-Let me know if you’d like me to tailor it more (e.g. add badges, examples, CI steps) or generate a markdown file you can directly commit!
