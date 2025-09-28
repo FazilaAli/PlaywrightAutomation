@@ -14,9 +14,7 @@ This repository demonstrates how to structure, maintain, and run UI automation t
 5. [Setup](#setup)
 6. [Running Tests](#running-tests)
 7. [Generating Reports](#generating-reports)
-8. [Best Practices & Guidelines](#best-practices--guidelines)
-9. [Contributing](#contributing)
-10. [Contact](#contact)
+8. [Contact](#contact)
 
 ---
 
@@ -137,34 +135,6 @@ After running tests:
    This will build and open a live report in your browser.
 
 You can also configure a pipeline or CI to publish the report.
-
----
-
-## Best Practices & Guidelines
-
-* Use **Page Object Model**: encapsulate page operations in separate classes
-* Keep test data separate (e.g. JSON, CSV, or property files)
-* Use test annotations (before, after) to manage setup/teardown
-* Use meaningful names for test methods and classes
-* Handle waits / synchronization carefully (avoid blind `Thread.sleep`)
-* Parameterize tests where possible (TestNG data providers)
-* Clean up after tests (close sessions, reset state)
-* Use tags/groups to control which tests run under different environments
-* In CI, ensure you archive/report Allure results
-
----
-
-## Contributing
-
-Contributions are welcome! Here’s how you can help:
-
-1. Fork the repository
-2. Create a feature branch (e.g. `feature/my-new-test`)
-3. Make your changes
-4. Add or update tests, documentation
-5. Submit a pull request
-
-Please follow code style, write descriptive commits, and ensure tests pass locally.
 
 ---
 
