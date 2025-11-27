@@ -1,4 +1,4 @@
-package com.myportfolio.pageobject;
+package SauceDemo.PageObjects;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;

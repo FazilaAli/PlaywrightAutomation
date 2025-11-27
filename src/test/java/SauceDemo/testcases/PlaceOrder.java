@@ -1,7 +1,7 @@
-package com.myportfolio.testcases;
+package SauceDemo.testcases;
 
 import com.microsoft.playwright.options.WaitForSelectorState;
-import com.myportfolio.base.BaseTest;
+import SauceDemo.base.BaseTest;
 import com.microsoft.playwright.*;
 import io.qameta.allure.*;
 import org.testng.annotations.*;
@@ -11,12 +11,8 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 
 public class PlaceOrder extends BaseTest {
 
+    // End-to-End Test
     @Test
-    @Description("Verify user can login successfully")
-    @Epic("Authentication")
-    @Feature("Login")
-    @Story("Valid login credentials")
-    @Severity(SeverityLevel.CRITICAL)
     public void verifyUserCanPlaceOrder() {
 
         // Navigate to Desired URL

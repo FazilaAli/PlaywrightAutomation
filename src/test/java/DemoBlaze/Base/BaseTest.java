@@ -1,10 +1,11 @@
-package com.myportfolio.base;
+package DemoBlaze.Base;
 
+import DemoBlaze.PageObjects.LoginPage;
+import DemoBlaze.PageObjects.SignupPage;
+import SauceDemo.pages.AddProducts;
+import SauceDemo.pages.Checkout;
+import SauceDemo.pages.Login;
 import com.microsoft.playwright.*;
-import com.myportfolio.pageobject.CartPage;
-import com.myportfolio.pages.AddProducts;
-import com.myportfolio.pages.Checkout;
-import com.myportfolio.pages.Login;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -15,9 +16,8 @@ public class BaseTest {
     protected static Page page;
 
     // Declare Page Objects here
-    protected Login login;
-    protected AddProducts add;
-    protected Checkout checkout;
+    protected LoginPage login;
+    protected SignupPage signup;
 
     @BeforeMethod
     public void setUp() {
@@ -27,9 +27,8 @@ public class BaseTest {
         page = context.newPage();
 
         // Initialize reusable Page Objects
-        login = new Login(page);
-        add = new AddProducts(page);
-        checkout = new Checkout(page);
+        login = new LoginPage(page);
+        signup = new SignupPage(page);
     }
 
     @AfterMethod

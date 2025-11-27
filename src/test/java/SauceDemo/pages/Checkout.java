@@ -1,11 +1,11 @@
-package com.myportfolio.pages;
+package SauceDemo.pages;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.WaitForSelectorState;
-import com.myportfolio.base.BaseTest;
-import com.myportfolio.pageobject.CartPage;
-import com.myportfolio.pageobject.CheckoutPage;
+import SauceDemo.base.BaseTest;
+import SauceDemo.PageObjects.CartPage;
+import SauceDemo.PageObjects.CheckoutPage;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 

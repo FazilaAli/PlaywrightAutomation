@@ -1,10 +1,10 @@
-package com.myportfolio.pages;
+package SauceDemo.pages;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.WaitForSelectorState;
-import com.myportfolio.base.BaseTest;
-import com.myportfolio.pageobject.LoginPage;
+import SauceDemo.base.BaseTest;
+import SauceDemo.PageObjects.LoginPage;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
