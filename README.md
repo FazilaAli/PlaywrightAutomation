@@ -78,38 +78,6 @@ src
 * **Version Control:** Git & GitHub
 * **CI/CD (optional):** GitHub Actions / Azure Pipelines
 
-## How to Run Tests
-
-1. Clone the repository:
-
-```bash
-git clone <repository-url>
-```
-
-2. Navigate to the project folder:
-
-```bash
-cd <project-folder>
-```
-
-3. Build the project using Maven:
-
-```bash
-mvn clean install
-```
-
-4. Run all tests:
-
-```bash
-mvn test
-```
-
-5. UI and API tests are organized separately under `test/java/UI` and `test/java/API` for targeted execution.
-
----
-
-## Why This Project?
-
 This project reflects hands-on experience in:
 
 * Building **scalable automation frameworks** for both UI and API testing.
