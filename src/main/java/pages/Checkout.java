@@ -1,53 +1,49 @@
-package SauceDemo.pages;
+package pages;
 
+import base.BaseTest;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.WaitForSelectorState;
-import SauceDemo.base.BaseTest;
-import SauceDemo.PageObjects.CartPage;
-import SauceDemo.PageObjects.CheckoutPage;
+import pageobjects.SauceDemo;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 public class Checkout extends BaseTest {
-    private final CartPage CartPage;
-    private final CheckoutPage CheckoutPage;
 
     public Checkout(Page page) {
         this.page = page;
-        this.CartPage = new CartPage(page);
-        this.CheckoutPage = new CheckoutPage(page);
+        sd = new SauceDemo(page);
     }
 
     // Reusable method to Checkout
     public void verifyCheckout() {
 
         // Click Cart Icon
-        CartPage.assertBackPack();
+        sd.assertBackPack();
 
         // Add Backpack to cart
-        CartPage.clickCartIcon();
+        sd.clickCartIcon();
 
         // Add Jacket to Cart
-        CartPage.clickRemoveJacket();
+        sd.clickRemoveJacket();
 
         // Click Checkout
-        CartPage.clickCheckout();
+        sd.clickCheckout();
     }
 
     public void verifyCheckoutInformation() {
 
         // Enter Firstname
-        CheckoutPage.setfirstname("John");
+        sd.setfirstname("John");
 
         // Enter Lastname
-        CheckoutPage.setlastname("Doe");
+        sd.setlastname("Doe");
 
         // Enter Zipcode
-        CheckoutPage.setzipcode("0980737");
+        sd.setzipcode("0980737");
 
         // Enter Click Continue
-        CheckoutPage.clickContinue();
+        sd.clickContinue();
 
         // Assert Checkout Summary
 
@@ -90,7 +86,7 @@ public class Checkout extends BaseTest {
         System.out.println("Checkout Summary is asserted");
 
         // Enter Click Finish
-        CheckoutPage.clickFinish();
+        sd.clickFinish();
 
     }
 }

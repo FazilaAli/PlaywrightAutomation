@@ -1,9 +1,8 @@
-package SauceDemo.testcases;
+package UI;
 
+import base.BaseTest;
 import com.microsoft.playwright.options.WaitForSelectorState;
-import SauceDemo.base.BaseTest;
 import com.microsoft.playwright.*;
-import io.qameta.allure.*;
 import org.testng.annotations.*;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
@@ -19,14 +18,14 @@ public class PlaceOrder extends BaseTest {
         page.navigate("https://www.saucedemo.com/");
 
         // Login flow
-        login.verifyLogin("standard_user", "secret_sauce");
+        log.verifyLogin("standard_user", "secret_sauce");
 
         // Add Products
-        add.verifyAddProducts();
+        ap.verifyAddProducts();
 
         // Checkout
-        checkout.verifyCheckout();
-        checkout.verifyCheckoutInformation();
+        ch.verifyCheckout();
+        ch.verifyCheckoutInformation();
 
         // Assert Order Placed Successful
         page.locator("//h2[text()='Thank you for your order!']").waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));

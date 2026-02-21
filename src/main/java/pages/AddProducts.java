@@ -1,29 +1,28 @@
-package SauceDemo.pages;
+package pages;
 
+import base.BaseTest;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.WaitForSelectorState;
-import SauceDemo.base.BaseTest;
-import SauceDemo.PageObjects.InventoryPage;
+import pageobjects.SauceDemo;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 public class AddProducts extends BaseTest {
-    private final InventoryPage InventoryPage;
 
     public AddProducts(Page page) {
         this.page = page;
-        this.InventoryPage = new InventoryPage(page);
+        sd = new SauceDemo(page);
     }
 
     // Reusable method to AddProducts
     public void verifyAddProducts() {
 
         // Add Backpack to cart
-        InventoryPage.clickAddBackPack();
+        sd.clickAddBackPack();
 
         // Add Jacket to cart
-        InventoryPage.clickAddJacket();
+        sd.clickAddJacket();
 
         // Assert products are added
         page.locator("//div[@id='shopping_cart_container']//span[contains(text(),'2')]").waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));

@@ -1,8 +1,8 @@
-package DemoBlaze.TestCases;
+package UI;
 
-import DemoBlaze.Base.BaseTest;
 import Utils.JsonReader;
-import org.json.simple.JSONObject;
+import base.BaseTest;
+import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,7 +12,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void testValidLogin() {
         // Read JSON data
-        JSONObject data = JsonReader.readJSON("src/test/java/DemoBlaze/TestData/TestData.json");
+        JSONObject data = JsonReader.readJSON("src/test/java/UI/TestData/TestData.json");
         JSONObject validUser = (JSONObject) data.get("validUser");
 
         String username = (String) validUser.get("email");
@@ -22,7 +22,7 @@ public class LoginTest extends BaseTest {
         page.navigate("https://www.demoblaze.com/");
 
         // Login Steps
-        login.LoginSteps(username,password);
+        dm.LoginSteps(username,password);
 
         // After login, you can assert user is logged in by checking "Welcome username" text
         String welcomeText = page.locator("//a[text()='Welcome testuser@yopmail.com']").textContent();
@@ -33,7 +33,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void testInvalidLogin() {
         // Read JSON data
-        JSONObject data = JsonReader.readJSON("src/test/java/DemoBlaze/TestData/TestData.json");
+        JSONObject data = JsonReader.readJSON("src/test/java/UI/TestData/TestData.json");
         JSONObject validUser = (JSONObject) data.get("invalidUser");
 
         String username = (String) validUser.get("email");
@@ -52,7 +52,7 @@ public class LoginTest extends BaseTest {
         });
 
         // Login Steps
-        login.LoginSteps(username,password);
+        dm.LoginSteps(username,password);
 
     }
 
@@ -60,7 +60,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void testEmptyLogin() {
         // Read JSON data
-        JSONObject data = JsonReader.readJSON("src/test/java/DemoBlaze/TestData/TestData.json");
+        JSONObject data = JsonReader.readJSON("src/test/java/UI/TestData/TestData.json");
         JSONObject validUser = (JSONObject) data.get("invalidUser");
 
         String username = (String) validUser.get("email");
@@ -79,7 +79,7 @@ public class LoginTest extends BaseTest {
         });
 
         // Login Steps
-        login.LoginSteps(username,password);
+        dm.LoginSteps(username,password);
 
     }
 }
